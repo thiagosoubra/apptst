@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#444">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cover"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/temp_profile"
+                app:shapeAppearanceOverlay="@style/CircularImageViewStyle" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/partIndexContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/background_round_4"
+                        android:backgroundTint="@color/secondary"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/currentPartIndex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/black"
+                            android:text="1"
+                            android:textSize="12dp"
+                            android:textColor="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/black"
+                            android:text="/"
+                            android:alpha="0.75"
+                            android:textSize="12dp"
+                            android:textColor="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/allPartsIndex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:text="17"
+                            android:textSize="12dp"
+                            android:alpha="0.75"
+                            android:textColor="@color/primary" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/partTitleScrollView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:scrollbars="none"
+                        android:overScrollMode="never">
+                        <TextView
+                            android:id="@+id/partTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:text="O Pior Aniversário"
+                            android:textColor="@color/primary"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:ellipsize="none" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:id="@+id/fullTitleScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:scrollbars="none"
+                    android:overScrollMode="never">
+                    <LinearLayout
+                        android:id="@+id/fullTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Harry Potter e a Pedra Filosofal"
+                            android:textColor="@color/primary"
+                            android:singleLine="true"
+                            android:ellipsize="none" />
+                        <View
+                            android:id="@+id/view_divider_between_title_and_by"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:background="@drawable/background_round"
+                            android:backgroundTint="@color/primary" />
+                        <TextView
+                            android:id="@+id/by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="J. K. Rowling"
+                            android:textColor="@color/primary"
+                            android:singleLine="true"
+                            android:ellipsize="none" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timeDisplayContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/timeElapsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/regular" />
+
+            <TextView
+                android:id="@+id/timeRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-00:00"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/regular" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/progressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_gravity="center">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="@color/secondary"
+                    android:alpha="0.5"
+                    android:layout_gravity="center"/>
+                <View
+                    android:id="@+id/progressBar"
+                    android:scaleX="1"
+                    android:pivotX="0"
+                    android:layout_width="74.4dp"
+                    android:layout_height="6dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="6dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="@color/main"
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/progressPercentual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="@color/main"
+                    android:text="58%"
+                    android:gravity="center"
+                    android:layout_marginStart="75.4dp"
+                    android:paddingHorizontal="8dp"
+                    android:fontFamily="@font/black"
+                    android:textColor="@color/primary"
+                    android:textSize="12dp"/>
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timeSpeedAdjust"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="1.0\nx"
+                android:lineHeight="14dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:fontFamily="@font/bold"
+                android:background="@drawable/background_round"
+                android:textColor="@color/primary"
+                app:backgroundTint="@android:color/transparent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/prevPart"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/ic_chevron_left"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#555" />
+            <ImageButton
+                android:id="@+id/playPause"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/ic_play"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/background_round"
+                android:backgroundTint="@color/main" />
+            <ImageButton
+                android:id="@+id/nextPart"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/ic_chevron_right"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#555" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/partText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_text"
+                android:gravity="center"
+                android:fontFamily="@font/bold"
+                android:background="@drawable/background_round"
+                app:backgroundTint="@android:color/transparent"
+                android:textColor="@color/secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

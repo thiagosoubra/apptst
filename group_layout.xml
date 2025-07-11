@@ -1,0 +1,93 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    app:cardCornerRadius="25dp"
+    app:cardBackgroundColor="#222">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontalRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:paddingVertical="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="@dimen/card_min_size"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="horizontal"
+        android:orientation="horizontal" />
+        <LinearLayout
+            android:layout_width="@dimen/card_min_size"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient_left"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary"
+                android:paddingHorizontal="4dp"
+                android:letterSpacing="0.1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="6dp"
+                android:textSize="10dp"
+                android:background="@drawable/background_round_4"
+                android:gravity="center"
+                android:fontFamily="@font/black"
+                android:text="SÉRIE"/>
+            <TextView
+                android:id="@+id/groupTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:paddingHorizontal="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/bold"
+                android:text="Harry Potter"/>
+            <TextView
+                android:id="@+id/groupCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:paddingHorizontal="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="center"
+                android:alpha="0.75"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/regular"
+                android:text="7 itens"/>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="18dp"
+                android:background="@drawable/background_round_8_stroke_2"
+                android:backgroundTint="#80FFFFFF">
+
+                <View
+                    android:layout_width="62.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/background_round" />
+
+                <TextView
+                    android:id="@+id/progressBarGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="25%"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

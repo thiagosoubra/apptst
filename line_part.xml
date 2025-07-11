@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/background_round_8"
+    android:backgroundTint="#222"
+    android:padding="12dp"
+    android:layout_marginVertical="4dp"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/oiblePartIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/black"
+        android:text="01"
+        android:textColor="#ccc"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/oibletitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="O Pior Aniversário"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/bold"/>
+    <TextView
+        android:id="@+id/oiblePartComplete"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_round_4"
+        android:backgroundTint="#21c063"
+        android:fontFamily="@font/black"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="2dp"
+        android:text="CONCLUÍDO"
+        android:textColor="@color/secondary"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/oiblePartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3:33"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/regular"/>
+</LinearLayout>

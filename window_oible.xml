@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <include layout="@layout/frame_oible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primary"
+                    android:alpha="0.1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/oibleYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp"
+                            android:layout_weight="1"
+                            android:text="31 de Dez. de 1997"
+                            android:textColor="@color/primary"
+                            android:drawableLeft="@drawable/ic_calendar"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/primary"
+                            android:alpha="0.1" />
+                        <TextView
+                            android:id="@+id/bookTotalTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="3 hrs e 15 min."
+                            android:textColor="@color/primary"
+                            android:drawableLeft="@drawable/ic_clock"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primary"
+                    android:alpha="0.1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="@string/fazer_uma_busca"
+                            android:drawableStart="@drawable/ic_grid2"
+                            android:drawablePadding="6dp"
+                            android:fontFamily="@font/regular"
+                            android:text="Conteúdo"
+                            android:textColor="@color/primary"
+                            android:textSize="22sp" />
+
+                        <LinearLayout
+                            android:id="@+id/partsContainer"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="@string/fazer_uma_busca"
+                            android:drawableStart="@drawable/ic_info"
+                            android:drawablePadding="4dp"
+                            android:fontFamily="@font/regular"
+                            android:text="Sobre"
+                            android:textColor="#80FFFFFF"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/bookAbout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/primary"
+                            android:textIsSelectable="false"
+                            android:justificationMode="inter_word"
+                            android:maxLines="5"
+                            android:ellipsize="end"
+                            android:text="As aulas estão de volta a Hogwarts e Harry Potter não vê a hora de embarcar no Expresso a vapor que o levará de volta à escola de bruxaria. Mais uma vez suas férias na rua dos Alfeneiros, 4, foi triste e solitária. Tio Válter Dursley estava especialmente irritado com ele, porque seu amigo Rony Weasley tinha lhe telefonado. E ele não aceitava qualquer ligação de Harry com o mundo dos mágicos dentro de sua casa. A situação piorou ainda mais com a chegada de tia Guida, irmã de Válter. Harry já estava acostumado a ser humilhado pelos Dursley, mas quando tia Guida passou a ofender os pais de Harry, mortos pelo bruxo Voldemort, ele não agüentou e transformou-a num imenso balão. Irritado, fugiu da casa dos tios, indo se abrigar no Beco Diagonal. Lá ele reencontra Rony e Hermione, seus melhores amigos em Hogwarts e, para sua surpresa, é procurado pelo próprio Ministro da Magia. Sem que Harry saiba, o ministro está preocupado com o garoto, pois fugiu da prisão de Azkaban o perigoso bruxo Sirius Black, que teria assassinado treze pessoas com um único feitiço e traído os pais de Harry, entregando-os a Voldemort. Sob forte escolta, o garoto é levado para Hogwarts. Na escola as dificuldades são as de sempre: Severo Snape, o professor de Poções, o trata cada vez pior, enquanto ele tem de se esforçar nos treinos de quadribol, e levar Grifinória à vitória do campeonato. Para piorar a situação, os terríveis guardas de Azkaban, conhecidos por dementadores, estão de guarda nos portões da escola, caso Sirius Black tente algo contra Harry. Por fim, Harry tem de enfrentar seu inimigo para salvar Rony e obrigado a escolher entre matar ou não aquele que traiu seus pais.
+Com muita ação, humor e magia, Harry Potter e o prisioneiro de Azkaban traz de volta o gigante atrapalhado Rúbeo Hagrid, o sábio diretor Alvo Dumbledore, a exigente professora de transformação Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para Harry."
+                            />
+                </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/header_oi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/bookTitle"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Book title"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/activity_background">
+
+    <include layout="@layout/frame_oible" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:paddingHorizontal="16dp"
+                android:fontFamily="@font/black"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#666"
+                android:gravity="center"
+                android:text="Todos"
+                android:textSize="14sp"
+                android:textColor="@color/primary" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/regular"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:text="Coleções"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#444"
+                android:textSize="13sp"
+                android:textColor="#7FFFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/regular"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:text="Completos"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#444"
+                android:textSize="13sp"
+                android:textColor="#7FFFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/regular"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:text="Novos"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#444"
+                android:textSize="13sp"
+                android:textColor="#7FFFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:text="Favoritos"
+                android:background="@drawable/background_round"
+                android:backgroundTint="#444"
+                android:textSize="13sp"
+                android:textColor="#7FFFFFFF" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:gravity="end"
+        android:orientation="horizontal">
+ry"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@drawable/background_round_8"
+            android:backgroundTint="#181818"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_round_8"
+                android:backgroundTint="#262626"
+                android:src="@drawable/ic_a_z_sort" />
+
+            <ImageButton
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_round_8"
+                android:backgroundTint="#181818"
+                android:alpha="0.5"
+                android:src="@drawable/ic_clock" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

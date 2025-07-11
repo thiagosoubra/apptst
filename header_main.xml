@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/statusBarSpace"
+        android:layout_width="match_parent"
+        android:background="#444"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="@drawable/background_gradient_top">
+        <LinearLayout
+            android:id="@+id/swipe_player"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/background_logo_new"
+            android:backgroundTint="#444"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/background_gradient_radial"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="@color/main"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

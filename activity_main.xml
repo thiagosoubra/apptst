@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Conteúdo da tela -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:background="@color/activity_background"
+        android:layout_height="match_parent">
+        <!-- conteúdo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- home -->
+            <include
+                android:id="@+id/mainLayout"
+                layout="@layout/window_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!-- oible -->
+            <include
+                android:id="@+id/windowOible"
+                layout="@layout/window_oible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+            <!-- text oible -->
+            <include
+                android:id="@+id/windowPartText"
+                layout="@layout/window_part_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- header -->
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_main"
+            android:clickable="true"
+            android:focusable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- footer -->
+        <include
+            android:id="@+id/footer"
+            layout="@layout/nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/player"
+        layout="@layout/window_player_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:visibility="gone" />
+
+</FrameLayout>

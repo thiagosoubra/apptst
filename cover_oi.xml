@@ -1,0 +1,51 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="@dimen/card_min_size">
+
+    <ImageView
+        android:id="@+id/coverImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_image"
+        android:foreground="@drawable/background_gradient_bottom_2"
+        android:foregroundTint="#222"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <ImageView
+            android:id="@+id/ImageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:src="@drawable/temp_title_light"
+            android:adjustViewBounds="true"
+            android:layout_gravity="bottom"
+            app:tint="@color/primary"
+            android:scaleType="fitCenter" />
+        <TextView
+            android:id="@+id/groupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="J. K. Rowling" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
